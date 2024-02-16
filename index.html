@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+		<input type="text" autocapitalize="off">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+<!--		<link rel="stylesheet" href="plugin/highlight/monokai.css">-->
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/atom-one-dark.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img class="stack fade-up flowimgs visible" style="width:45%; bottom:532px; left:4%;" src="figures/shared_voc.jpg" data-fragment-index="0">
+<!--					<img class="fragment" src="figures/shared_voc.jpg" top=200 left=0 width="400" height="400">-->
+					<div class="vertical-line"></div>
+<!--					<img class="stack" src="figures/predicates.png" top=200 right=0 width="119" height="164">-->
+<!--					<img class="stack" src="figures/utilities.png" top=200 left=0 width="14.5" height="164">-->
+					<img class="stack" style="width:20%; bottom:5px; right:-4%;" src="figures/robot-push-domain.png">
+					<img class="stack" style="width:45%; bottom:532px; right:-4%;" src="figures/SERL_gif_3.gif">
+
+				</section>
+				<section data-auto-animate>
+					<h3 class="presentation_title"> Ising Model States </h3>
+
+						<div style="display: flex; justify-content: space-around;">
+							<img style="height: 200px; width: auto;" src="figures/predicates.png">
+							<img style="height: 200px; width: auto;" src="data/2.0.gif">
+							<img style="height: 200px; width: auto;" src="data/2.2.gif">
+							<img style="height: 200px; width: auto;" src="data/2.3.gif">
+						</div>
+						<div style="display: flex; justify-content: space-around;">
+							<img style="height: 200px; width: auto;" src="data/2.4.gif">
+							<img style="height: 200px; width: auto;" src="data/2.6.gif">
+							<img style="height: 200px; width: auto;" src="data/3.0.gif">
+						</div>
+
+				</section>
+				<section data-auto-animate>
+					<!-- title slide -->
+					<h2>Learning from Ambiguous Demonstrations with Self-Explanation Guided Reinforcement Learning</h2>
+					<div>
+						<div>
+							<span>
+								<a href="https://yantianzha.github.io/">Yantian Zha</a>,</span>
+							<span>
+								<a href="https://guansuns.github.io/">Lin Guan</a>,</span>
+							<span>
+								<a href="https://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a>
+							</span>
+						</div>
+
+						<div style="display: flex; justify-content: space-around;">
+							<img style="height: 200px; width: auto; margin-right: -460px;" src="figures/yantian.png">
+							<img style="height: 200px; width: auto; margin-right: -460px;" src="figures/lin.png">
+							<img style="height: 200px; width: auto;" src="figures/rao.jpg">
+						</div>
+					</div>
+					<h4>Arizona State University</h4>
+
+					<a href="https://github.com/YantianZha/SERLfD">
+						<p style="font-family: monospace;">https://github.com/YantianZha/SERLfD</p>
+					</a>
+
+					<aside class="notes">
+						Today, I want to tell you about Scaling Up & Distilling Down, A Framework for Language-guided Robot
+						Skill Acquisition.
+						This is joint work with Pete Florence and my advisor, Shuran Song.
+					</aside>
+				</section>
+
+				<!-- motivate skill learning -->
+				<section>
+					<h2 class="toptitle">Robot Task Learning</h2>
+					<section data-auto-animate>
+						<!-- title slide -->
+<!--						<h1 class="toptitle">Robot Task Learning</h1>-->
+						<div>
+							<!-- clipport peract stuff -->
+							<div style="display: flex; justify-content: space-around;">
+								<img style="height: 200px; width: auto;" src="figures/image13.gif">
+								<img style="height: 200px; width: auto;" src="figures/image14.gif">
+								<img style="height: 200px; width: auto;" src="figures/image15.gif">
+							</div>
+							<div style="display: flex; justify-content: space-around;">
+								<img style="height: 200px; width: auto;" src="figures/image16.gif">
+								<img style="height: 200px; width: auto;" src="figures/image17.gif">
+								<img style="height: 200px; width: auto;" src="figures/image18.gif">
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4><span style="color: dimgrey;">How to convey the</span> <b>task knowledge</b> <span style="color: dimgrey;">to robots? </span></h4>
+					</section>
+
+					<section data-auto-animate>
+						<h4><span style="color: dimgrey;">How to convey the <b>task knowledge</b> to robots? </span></h4>
+						<img src="figures/image19.png" alt="Image Icon" style="height: 76px; width: auto; vertical-align: middle;"> <span style="color: deeppink;">Convey the task via <data></data></span> <b>(demonstrations)</b>
+					</section>
+
+				</section>
+
+				<section>
+					<h2 class="toptitle">Learning from Demonstrations <span style="color: deeppink;">(LfD)</span></h2>
+
+					<section data-auto-animate>
+						<div
+							style="width:960px;height:300px; position: fixed;top: 150px; left:150px; display:flex;flex-direction: row;">
+							<div class="columnwrapper" style="width:800px;height:300px;">
+								<img height="650px" muted data-autoplay src="figures/image20.gif"
+									type="video/mp4"></img>
+								<p class="reference" style="margin-top: -10px; font-size: x-large;">
+									<a href="https://sites.google.com/asu.edu/affordance-aware-imitation/project">
+										Affordance-Aware Imitation Learning</a>, Zha et al., IROS, 2022
+								</p>
+							</div>
+							<div class="columnwrapper" style="width:650px;height:300px;">
+								<img height="650px" muted data-autoplay src="figures/image21.gif"
+									type="video/mp4"></img>
+								<p class="reference" style="margin-top: -10px; font-size: x-large;">
+									<a href="https://arxiv.org/abs/2105.06411">
+										Coarse-to-Fine Imitation Learning</a>, Edward Johns, ICRA, 2021
+								</p>
+							</div>
+							<div class="columnwrapper" style="width:400px;height:300px;">
+								<img height="650px" muted data-autoplay src="figures/image22.gif"
+									type="video/mp4"></img>
+								<p class="reference" style="margin-top: -10px; font-size: x-large;">
+									<a href="https://arxiv.org/abs/1703.07326">
+										One-Shot Imitation Learning</a>, Yu et al., RSS, 2018
+								</p>
+							</div>
+						</div>
+
+						<p class="fragment" style="position: fixed; top: 550px; left: 200px">✅ <span style="color: dimgrey;">Demonstrations provide a robust learning signal, contributing to</span> sample-efficient learning</p>
+
+						<img class="noborder fragment" data-fragment-index="2" src="figures/image25.jpeg"
+							style="position:fixed; top: 145px; left: 50px; width: 600px;" />
+
+						<img class="noborder fragment" data-fragment-index="2" src="assets/medium_up_arrow.svg"
+							style="position:fixed; top: 350px; left: 600px; width: 50px;" />
+						<p class="fragment" data-fragment-index="1"
+							style="position: fixed; top: 450px; left: 450px; width: 350px;">❌ exploration in sparse reward
+							and long-horizon</p>
+
+						<div style="position: fixed; right: 50px; top: 220px;">
+							<p class="fragment" data-fragment-index="2">
+								Scalable <br> Skill <br> Learning
+							</p>
+						</div>
+					</section>
+
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Options
+				width: 1280, // Set the width of the presentation
+				height: 720, // Set the height of the presentation
+				aspectRatio: 16/9, // Set the aspect ratio to 16:9
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
