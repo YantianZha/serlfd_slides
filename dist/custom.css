@@ -1,3 +1,19 @@
+.reference {
+    /* small footnote at absolute bottom right */
+    bottom: 0;
+    left: 0;
+    font-size: 0.5em;
+    margin: 5px;
+    margin-top: -5px;
+}
+
+.reveal .noborder {
+    /* image without borders */
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+}
+
 .reveal .toptitle {
     /* title at top of slides */
     position: fixed;
@@ -5,4 +21,18 @@
     left: 0px;
     width: 100%;
     text-align: center;
+}
+
+.reveal .columnwrapper {
+    /* columns */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reveal .column {
+    /* column */
+    flex: 1;
+    margin: 10px;
 }
