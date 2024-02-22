@@ -23,6 +23,12 @@
     text-transform: capitalize; /* Capitalize the first letter of each word in titles and subtitles */
 }
 
+.vertical-line {
+    height: 600px; /* Adjust height as needed */
+    width: 2px; /* Adjust width as needed */
+    background-color: orange; /* Adjust color as needed */
+}
+
 .reveal .toptitle {
     /* title at top of slides */
     position: fixed;
@@ -30,6 +36,25 @@
     left: 0px;
     width: 100%;
     text-align: center;
+}
+
+.reveal h1 span.no-transform,
+.reveal h2 span.no-transform,
+.reveal h3 span.no-transform,
+.reveal h4 span.no-transform,
+.reveal h5 span.no-transform,
+.reveal h6 span.no-transform { text-transform: none; }
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+.lowercase-first-uppercase {
+    text-transform: lowercase;
+}
+
+.lowercase-first-uppercase:first-letter {
+    text-transform: uppercase;
 }
 
 /*.reveal .columnwrapper {*/
