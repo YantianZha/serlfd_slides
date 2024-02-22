@@ -5,7 +5,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 
 		<!-- Font awesome is required for the chalkboard plugin -->
@@ -24,7 +24,7 @@
 <!--		<script src="reveal.js/lib/js/html5shiv.js"></script>-->
 <!--		<![endif]&ndash;&gt;-->
 
-		<title>reveal.js</title>
+		<title>Learning from Ambiguous Demonstrations with Self-Explanation Guided Reinforcement Learning</title>
 <!--		<input type="text" autocapitalize="off">-->
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -715,31 +715,19 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-			  customcontrols: {
-    controls: [
-      { icon: '<i class="fa fa-pen-square"></i>',
-        title: 'Toggle chalkboard (B)',
-        action: 'RevealChalkboard.toggleChalkboard();'
-      },
-      { icon: '<i class="fa fa-pen"></i>',
-        title: 'Toggle notes canvas (C)',
-        action: 'RevealChalkboard.toggleNotesCanvas();'
-      }
-    ]
-  },
-  				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-//					{ src: 'reveal.js-plugins/audio-slideshow/slideshow-recorder.js'},
-					{ src: 'reveal.js-plugins/audio-slideshow/audio-slideshow.js'},
-					{ src: 'reveal.js-plugins/chalkboard/chalkboard.js'},
-					{ src: 'reveal.js-plugins/menu/menu.js'},
-				],
+				customcontrols: {
+				controls: [
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				}
+				]
+				},
+
   				chalkboard: { // font-awesome.min.css must be available
 					src: "chalkboard/chalkboard.json",
 					toggleChalkboardButton: { left: "80px" },
@@ -766,6 +754,7 @@
 				aspectRatio: 16/9, // Set the aspect ratio to 16:9
 				slideNumber: true,
 				controls: true,
+
 <!--				menu: {-->
 <!--    themes: false,-->
 <!--    transitions: false,-->
@@ -773,7 +762,7 @@
 <!--    hideMissingTitles: true-->
 <!--}-->
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealCustomControls]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,  RevealCustomControls]
 			});
 		</script>
 
