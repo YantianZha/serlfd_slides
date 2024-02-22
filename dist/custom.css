@@ -1,17 +1,26 @@
-.reference {
-    /* small footnote at absolute bottom right */
-    bottom: 0;
-    left: 0;
-    font-size: 0.5em;
-    margin: 5px;
-    margin-top: -5px;
+/*.reference {*/
+/*    !* small footnote at absolute bottom right *!*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    font-size: 0.5em;*/
+/*    margin: 5px;*/
+/*    margin-top: -5px;*/
+/*}*/
+
+/*.reveal .noborder {*/
+/*    !* image without borders *!*/
+/*    border: 0px;*/
+/*    box-shadow: none;*/
+/*    outline: none;*/
+/*}*/
+
+/* CSS */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    text-transform: lowercase; /* Convert all text to lowercase */
 }
 
-.reveal .noborder {
-    /* image without borders */
-    border: 0px;
-    box-shadow: none;
-    outline: none;
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    text-transform: capitalize; /* Capitalize the first letter of each word in titles and subtitles */
 }
 
 .reveal .toptitle {
@@ -23,16 +32,16 @@
     text-align: center;
 }
 
-.reveal .columnwrapper {
-    /* columns */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+/*.reveal .columnwrapper {*/
+/*    !* columns *!*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*}*/
 
-.reveal .column {
-    /* column */
-    flex: 1;
-    margin: 10px;
-}
+/*.reveal .column {*/
+/*    !* column *!*/
+/*    flex: 1;*/
+/*    margin: 10px;*/
+/*}*/
